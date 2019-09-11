@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head> 
+<title>Art</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://intridea.github.io/sketch.js/lib/sketch.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<script type="text/javascript">
+  $(function() {
+
+    $('#simple_sketch').sketch();
+  });
+  
+  
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+	if(x == "flower"){
+	document.getElementById("simple_sketch").style.background="url('http://azcoloring.com/coloring/MdT/9Mj/MdT9MjGi7.jpg') no-repeat center";}
+	else if(x == "turtle"){
+		document.getElementById("simple_sketch").style.background="url('https://s-media-cache-ak0.pinimg.com/736x/79/d6/b3/79d6b36be5ef5974c4e5764779e1bb9c.jpg') no-repeat center";}
+	else if(x=="minion"){
+			document.getElementById("simple_sketch").style.background="url('https://s-media-cache-ak0.pinimg.com/236x/92/0d/54/920d54b286364345652ae3d9adde1522.jpg') no-repeat center";}
+   else if(x=="blank"){
+			document.getElementById("simple_sketch").style.background="white";
+			}
+	else if(x=="fish"){
+			document.getElementById("simple_sketch").style.background="url('http://www.onlycoloringpages.com/wp-content/uploads/2015/12/animal-coloring-pages-for-kids.jpg') no-repeat center";}
+	else if(x=="elmo"){
+			document.getElementById("simple_sketch").style.background="url('http://www.writers-zone.com/wp-content/uploads/2016/11/coloring-pages-for-toddlers-coloring-pages-for-kids-colouring-sheets-for-toddlers.gif') no-repeat center";}
+	else if(x=="star"){
+			document.getElementById("simple_sketch").style.background="url('http://www.writers-zone.com/wp-content/uploads/2016/11/coloring-pages-for-toddlers-coloring-pages-for-kids-colouring-sheets-for-toddlers-1-268x268.jpg') no-repeat center";}
+
+	
+    
+}
+</script>
+
+<style>
+#drawIt{ padding-top:50px}
+
+.container{background-color:white}
+</style>
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+
+<div id="drawIt" class="container text-center">
+<h3>Draw It</h3>
+<h4>Here is a space where you can draw or color anything you want</h4>
+<h4>Pick a picture and color or just doodle on a blank space. </h4>
+
+<div class="tools">
+<a href="#simple_sketch" data-color="#f00"><img class="img-rounded" src="https://i0.wp.com/fusion.net/wp-content/uploads/2016/05/RED.jpg?resize=1600%2C900&quality=80&strip=all" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#ff0"><img class="img-rounded" src="https://lh3.googleusercontent.com/nhzkOTPaoWAYfO-LeklB_kPd5bAqm43D87Q3eHlK3alIse8rgrYPE74epbbbZ2b4EsY=w300" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#0f0"><img class="img-rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Solid_green.svg/2000px-Solid_green.svg.png" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#0ff"><img class="img-rounded" src="https://s-media-cache-ak0.pinimg.com/originals/90/9d/4f/909d4fe2e583e52dd9ffafb2dd56d6e5.jpg" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#00f"><img class="img-rounded" src="https://content.internetvideoarchive.com/content/photos/1428/06000501_.jpg" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#f0f"><img class="img-rounded" src="https://files.graphiq.com/2307/media/images/t2/Flamingo_Pink_430083_i0.png" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#fff"><img class="img-rounded" src="https://files.graphiq.com/2307/media/images/White_430113_i0.png" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-color="#000"><img class="img-rounded" src="http://www.solidbackgrounds.com/images/2560x1440/2560x1440-black-solid-color-background.jpg" width="50px" height="50px"/></a>
+
+
+
+<a href="#simple_sketch" data-tool="marker"><img src="http://www.clker.com/cliparts/h/X/p/J/o/d/red-marker-hi.png" width="50px" height="50px"/></a>
+<a href="#simple_sketch" data-tool="eraser"><img src="http://www.clker.com/cliparts/f/9/f/4/1197123224778170101lmproulx_eraser.svg.hi.png" width="50px" height="50px"/></a>
+
+<select id="mySelect" onchange="myFunction()">
+<option value="blank">Blank</option>
+  <option value="flower">Flower</option>
+  <option value="minion">Minion</option>
+  <option value="turtle">Turtle</option>
+  <option value="fish">Fishes</option>
+    <option value="elmo">Elmo</option>
+  <option value="star">Stars</option>
+
+
+  
+  </select>
+
+</div>
+
+<canvas  id="simple_sketch" width="1000" height="800"></canvas>
+</div>
+
+
+</body>

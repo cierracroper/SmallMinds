@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+
+<head> 
+<title> Math  -Kindergarten</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<style>
+
+#content{ padding-top: 50px}
+.container{background-color:white}
+</style>
+
+
+<script type="text/javascript">
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+	if(x == "counting"){
+	document.getElementById("frame").src="Activities/counting_k.html";}
+	else if(x=="missing"){
+	document.getElementById("frame").src = "Activities/missingNumber_k.html";}
+
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+<center><div id="content"class="container">
+<div><p> Math is an important subject for school age children to master. These activities will help make learning math fun with games ! </p>
+<p>Select an activity to do:</p>
+
+
+<select id="mySelect" onchange="myFunction()">
+<option value=""></option>
+<option value="counting">Counting 1.0</option>
+<option value="missing">Missing Numbers </option>
+
+
+</select>
+</div>
+
+
+<center><iframe id="frame" style="border:none;width:1000px;height:1250px;"></iframe></center>
+
+
+</div></center>
+
+
+</body>
+
+
+</html>

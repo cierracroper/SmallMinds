@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+
+<head> 
+<title>Writing - 3rd Grade</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<style>
+
+#content{ padding-top: 50px}
+.container{background-color:white}
+
+#frame{padding-top:25px}
+</style>
+
+
+<script type="text/javascript">
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+    if(x=="story"){
+	document.getElementById("frame").src ="Activities/finishStory.html";
+	}
+   else if(x == "cursive"){
+	document.getElementById("frame").src="Activities/letterTracing_2.html";}
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+<center><div id="content"class="container">
+<div><p> Writing and comprehension is an important subject for school age children to master. These activies will help them build there skills! </p>
+<p>Select an activity to do:</p>
+
+
+<select id="mySelect" onchange="myFunction()">
+<option value=""></option>
+<option value="story">Finish the Story!</option>
+<option value="cursive">Fun With Cursive.</option>
+
+
+</select>
+</div>
+
+
+<center><iframe id="frame" style="border:none;width:1000px;height:1250px;"></iframe></center>
+
+
+</div></center>
+
+
+</body>
+
+
+</html>

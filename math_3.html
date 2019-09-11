@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+<head> 
+<title> Math  -3rd Grade</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<style>
+
+#content{ padding-top: 50px}
+.container{background-color:white}
+</style>
+
+
+<script type="text/javascript">
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+	if(x == "division"){
+	document.getElementById("frame").src="Activities/division.html";}
+	else if(x== "multiply"){
+	
+	document.getElementById("frame").src="Activities/multiplication.html";}
+	 else if(x == "money"){
+	document.getElementById("frame").src="Activities/money.html";}
+
+	
+	}
+
+
+
+</script>
+
+
+
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+<center><div id="content"class="container">
+<div><p> Math is an important subject for school age children to master. These activities will help make learning math fun with games ! </p>
+<p>Select an activity to do:</p>
+
+
+<select id="mySelect" onchange="myFunction()">
+<option value=""></option>
+<option value="division">Divide It Up.</option>
+<option value="multiply">Multiplicatin Fun. </option>
+<option value="money">Counting Money ! </option>
+
+</select>
+</div>
+
+
+<center><iframe id="frame" style="border:none;width:1000px;height:1250px;"></iframe></center>
+
+
+</div></center>
+
+
+</body>
+
+
+</html>

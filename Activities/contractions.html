@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head> 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="activity.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+
+<style>
+body{
+font-family: 'Fredoka One', cursive
+
+
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<p>Drag and drop the contraction with it proper match</p>
+  <table class="table table-bordered" width="500" height="500">
+
+    <tbody>
+      <tr>
+        <td> 
+		they're
+		</td>
+		
+		<td id="col1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</td>  
+	  
+	  </tr>
+	  
+	        <tr>
+        <td> 
+		wasn't 
+		</td>
+		
+		<td  id="col2" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</td>  
+	  
+	  </tr>
+	  
+	  
+	  
+	        <tr>
+        <td> 
+		isn't 
+		</td>
+		
+		<td  id="col3" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</td>  
+	  
+	  </tr>
+	  
+	  
+	        <tr>
+        <td> 
+		won't
+		</td>
+		
+		<td  id="col4"ondrop="drop(event)" ondragover="allowDrop(event)">
+		</td>  
+	  
+	  </tr>
+	  
+	  
+	        <tr>
+        <td> 
+		can't
+		</td>
+		
+		<td  id="col5" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</td>  
+	  
+	  </tr>
+	  
+    </tbody>
+  </table>
+  
+  <table class="table table-bordered">
+<tr>
+<td><p id="opt4" draggable="true" ondragstart="drag(event)">will not </p></td>
+<td><p id="opt5" draggable="true" ondragstart="drag(event)">can not</p></td>
+<td><p id="opt1" draggable="true" ondragstart="drag(event)">they are</p></td>
+<td><p id="opt3" draggable="true" ondragstart="drag(event)">is not</p></td>
+<td><p id="opt2" draggable="true" ondragstart="drag(event)">was not</p></td>
+
+
+</tr>
+</table>  
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<head> 
+<title> Science-3rd Grade</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+<style>
+
+#content{ padding-top: 50px}
+.container{background-color:white}
+#frame{padding-top:25px}
+</style>
+
+
+<script type="text/javascript">
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+	if(x == "clouds"){
+	document.getElementById("frame").src="Activities/clouds_3.html";}
+	else if(x=="skeleton"){
+	document.getElementById("frame").src = "Activities/skeleton_3.html";
+	
+	}
+
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+
+<center><div id="content"class="container">
+<div><p>Learning basic concepts of science is important in early ages of children.  </p>
+
+<p>Select an activity to do:</p>
+
+
+<select id="mySelect" onchange="myFunction()">
+<option value=""></option>
+<option value="clouds">Which Cloud Is It?</option>
+<option value="skeleton">Identify The Bone!</option>
+
+
+
+</select>
+</div>
+
+
+<center><iframe id="frame" style="border:none;width:1000px;height:1250px;"></iframe></center>
+
+
+</div></center>
+
+
+</body>
+
+
+</html>

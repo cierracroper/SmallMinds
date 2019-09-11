@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head> 
+<title> Writing  -Kindergarten</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="final_index.css" />
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<style>
+
+#content{ padding-top: 50px}
+#frame{padding-top:25px}
+.container{background-color:white}
+</style>
+
+
+<script type="text/javascript">
+  function myFunction() {
+
+	var x = document.getElementById("mySelect").value;
+	if(x == "tracing"){
+	document.getElementById("frame").src="Activities/letterTracing_k.html";}
+	else if (x=="missing"){
+	document.getElementById("frame").src="Activities/missingLetter_k.html";
+	}
+
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<?php include 'navbar.php';?>
+
+</div>
+
+<center><div id="content" class="container">
+<div><p> Writing and comprehension is an important subject for school age children to master. These activies will help them build there skills! </p>
+<p>Select an activity to do:</p>
+
+
+
+
+<select id="mySelect" onchange="myFunction()">
+<option value=""></option>
+<option value="tracing">Alphabet Fun !</option>
+<option value="missing">What's Missing ? </option>
+
+</select>
+</div>
+
+
+<br /> 
+
+<br />
+
+<br />
+
+<center><iframe id="frame" style="border:none;width:1000px;height:1250px;"></iframe></center>
+
+
+</div></center>
+
+
+</body>
+
+
+</html>
